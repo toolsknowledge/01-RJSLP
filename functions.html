@@ -95,6 +95,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     var data = 100;
     //console.log( data );            //100
@@ -105,6 +107,50 @@
     };
     fun_one();                      //200
 </script>
+-->
+
+<!--
+    Anounymous Functions
+    --------------------
+        - The function without name called as "Anounymous" Function.
+
+        - Anounymous Functions also called as "Arrow" Functions.
+
+        - Arrow Functions introduced in "ES6".
+
+        - we will represent Arrow Functions "=>"
+
+Syntax
+------
+    //function definition
+    var/let/const functionname = (arg1, arg2, arg3, arg4, ..... argn)=>{
+        //business logic
+    };
+
+    //call the function
+    functionname(param1,param2,param3,param4,.....paramn);
+-->
+
+
+<!--
+<script>
+    let fun_one = ()=>{
+        return "welcome to arrow functions";
+    };
+    console.log( fun_one );
+    console.log( fun_one() );
+</script>
+-->
+
+<script>
+   let fun_one = ()=>{
+       return ()=>{
+            return "Hello";
+       };
+   };
+   console.log( fun_one()() );              //Hello
+</script>
+
 
 
 
