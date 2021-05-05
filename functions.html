@@ -142,6 +142,8 @@ Syntax
 </script>
 -->
 
+
+<!--
 <script>
    let fun_one = ()=>{
        return ()=>{
@@ -150,6 +152,241 @@ Syntax
    };
    console.log( fun_one()() );              //Hello
 </script>
+-->
+
+
+<!--
+    Rest Parameters in Functions
+    -----------------------------
+        - we will store more than one value by using rest parameters in functions.
+
+        - we will represent rest parameter by using "..." symbol.
+
+        - "..." symbol called as rest parameter.
+
+        - rest parameter introduced in "ES6"
+
+    Rules
+    -----
+    1) rest parameter position should be "last"
+
+    2) we can have only "one" rest parameter
+-->
+
+<!--
+<script>
+    function fun_one(...arg1){
+        console.log(arg1);
+    };
+    fun_one("Hello_1");                         //["Hello_1"]
+    fun_one("Hello_1","Hello_2");               //["Hello_1", "Hello_2"]
+    fun_one("Hello_1","Hello_2","Hello_3");     // ["Hello_1", "Hello_2", "Hello_3"]
+    fun_one();                                  //[]
+    fun_one(undefined);                         //[undefined]
+    fun_one(undefined,null);                    //[undefined, null]
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one( ...arg1, ...arg2 ){
+
+    };
+    //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,arg2){}
+    //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1, ...arg2){
+        console.log( arg1, arg2 );
+    };
+    fun_one();                              //undefined []
+    fun_one("Hello_1");                     //Hello_1 []
+    fun_one("Hello_1","Hello_1");           //Hello_1 ["Hello_1"]
+    fun_one(undefined,undefined);           //undefined [undefined]
+    fun_one(null,null);                     //null [null]
+</script>
+-->
+
+<!--
+    Default Parameters in Functions
+    -------------------------------
+        - while defining the functions, we will initilize arguments with default values.
+
+        - this concept also introduced in "ES6"
+-->
+
+<!--
+<script>
+    function fun_one(arg1="Hello_1",arg2="Hello_2",arg3="Hello_3"){
+        console.log( arg1, arg2, arg3 );
+    };
+    fun_one();                                      //Hello_1 Hello_2 Hello_3
+    fun_one("Welcome_1","Welcome_2","Welcome_3");   //Welcome_1 Welcome_2 Welcome_3
+    fun_one(undefined,undefined,undefined);         //Hello_1 Hello_2 Hello_3
+    fun_one(null,null,null);                        //null null null
+</script>
+-->
+
+
+<!--
+<script>
+    //combination of regular with default parameter
+    function fun_one(arg1,arg2="Hello_2"){
+        console.log( arg1, arg2 );
+    };
+    fun_one();                          //undefined "Hello_2"
+    fun_one("Hello_1");                 //Hello_1 Hello_2
+    fun_one(undefined,undefined);       //undefined "Hello_2"
+    fun_one(null,null);                 //null null
+</script>
+-->
+
+
+<!--
+<script>
+    //regular , default and rest parameter
+    function fun_one(arg1,arg2="Hello_2",...arg3){
+        console.log( arg1, arg2, arg3 );
+    };
+    fun_one();                              //undefined "Hello_2" []
+    fun_one("Hello_1");                     //Hello_1 Hello_2 []
+    fun_one("Hello_1",undefined,"Hello_3"); //Hello_1 Hello_2 ["Hello_3"]
+    fun_one(undefined,undefined,undefined); //undefined "Hello_2" [undefined]
+    fun_one(null,null,null);                //null null [null]
+</script>
+-->
+
+
+<!--
+    IIFE
+    ----
+        "IIFE" Stands for Immidiate Invokable Functional Expression
+
+        "ES9"
+
+        - when ever, we create the function, automatically it will invoke
+    Syntax
+    ------
+    ((arg1,arg2,arg3,.....argn)=>{
+        ----
+        ----
+        ----
+        business logic
+        ----
+        ----
+        ----
+    })(param1,param2,param3,....paramn)
+
+-->
+
+<!--
+<script>
+    (()=>{
+        console.log("welcome to IIFE");
+    })()
+    //welcome to IIFE
+</script>
+-->
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    })("Hello_1","Hello_2","Hello_3");
+    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+<!--
+<script>
+    let res = (()=>{
+        return "welcome to IIFE";
+    })();
+    console.log( res );    //welcome to IIFE
+</script>
+-->
+
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log( arg1, arg2, arg3 );
+    };
+
+    fun_one(
+
+        (()=>{ return "Hello_1" })(),
+
+        (()=>{ return "Hello_2" })(),
+
+        (()=>{ return "Hello_3" })()
+    );
+    //Hello_1 Hello_2 Hello_3    
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
