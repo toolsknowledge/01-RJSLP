@@ -317,6 +317,8 @@ Syntax
 </script>
 -->
 
+
+<!--
 <script>
     function fun_one(arg1,arg2,arg3){
         console.log( arg1, arg2, arg3 );
@@ -333,6 +335,342 @@ Syntax
     //Hello_1 Hello_2 Hello_3    
 
 </script>
+-->
+
+<!--
+    constructor functions
+    ---------------------
+        - collection of variables and functions called as "class".
+
+        - before ES6 version, we will create classes by using constructor functions.
+
+        - in constructor functions, all the members should start with "this" keyword.
+
+        - we can create object to the constructor functions by using "new" keyword.
+-->
+
+<!--
+<script>
+    function class_one(){
+        this.sub_one = "ReactJS";
+        this.sub_two = "NodeJS";
+        this.sub_three = "MongoDB";
+    };
+    let obj = new class_one();
+    console.log( obj.sub_one, obj.sub_two, obj.sub_three );     //ReactJS NodeJS MongoDB
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+        this.mern = "MERN Stack";
+        this.getMern = function(){
+            return this.mern;
+        };
+    };
+    let obj1 = new class_one();
+    console.log( obj1.getMern() );          //MERN Stack
+
+    let obj2 = new class_one();
+    console.log( obj2.mern );               //MERN Stack
+</script>
+-->
+
+<!--
+<script>
+    function class_one(){
+        
+        this.meanFun = function(){
+            return "MEAN Stack";
+        };
+
+        this.mernStack = function(){
+            return "MERN Stack";
+        };
+
+        this.mevnStack = function(){
+            return "MEVN Stack";
+        };
+
+    };
+
+    let obj1 = new class_one();
+    console.log( obj1.meanFun(), obj1.mernStack(), obj1.mevnStack() );
+    //MEAN Stack MERN Stack MEVN Stack
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one( arg1, arg2, arg3 ){
+        this.var_one = arg1;
+        this.var_two = arg2;
+        this.var_three = arg3;
+    };
+    let obj1 = new class_one("ReactJS","NodeJS","MongoDB");
+    console.log( obj1.var_one, obj1.var_two, obj1.var_three );
+    //ReactJS NodeJS MongoDB
+
+    let obj2 = new class_one("Angular11","Deno","CassandraDB");
+    console.log( obj2.var_one, obj2.var_two, obj2.var_three );
+    //Angular11 Deno CassandraDB
+
+    let obj3 = new class_one("VueJS","NodeJS","MySQL");
+    console.log( obj3.var_one, obj3.var_two, obj3.var_three );
+    //VueJS NodeJS MySQL
+</script>
+-->
+
+<!--
+<script>
+    function class_one(arg1, arg2, arg3){
+        this.var_one = arg1;
+        this.var_two = arg2;
+        this.var_three = arg3;
+    };
+    function class_two(){
+        this.fun_one = function(){
+            return "Hello_1";
+        };
+    };
+    function class_three(){
+        this.fun_one = function(){
+            return "Hello_2";
+        }; 
+    };
+    function class_four(){
+        this.fun_one = function(){
+            return "Hello_3";
+        };
+    };
+    let obj = new class_one( new class_two(), new class_three(), new class_four() );
+    console.log(  obj.var_one.fun_one() , obj.var_two.fun_one(), obj.var_three.fun_one() );
+    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+<!--
+<script>
+    function class_one(arg1,arg2,arg3){
+
+    };
+    let obj = new class_one("Hello_1","Hello_2","Hello_3");
+    console.log( obj.arg1, obj.arg2, obj.arg3 );
+    //undefined undefined undefined
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+        this.fun_one = ()=>{
+            return "Hello";
+        }
+    };
+    console.log( new class_one().fun_one() );   //Hello
+</script>
+-->
+
+
+<!--
+<script>
+    let class_one = ()=>{
+        this.var_one = "Hello";
+    };
+    console.log( new class_one().var_one );
+    //Uncaught TypeError: class_one is not a constructor
+</script>
+-->
+
+<!--
+<script>
+    function class_one(){
+
+    };
+
+    class_one.prototype.var_one = "Hello_1";
+    class_one.prototype.var_two = "Hello_2";
+    class_one.prototype.var_three = "Hello_3";
+    
+    let obj1 = new class_one();
+    console.log( obj1.var_one, obj1.var_two, obj1.var_three );  //Hello_1 Hello_2 Hello_3
+
+</script>
+-->
+
+<!--
+<script>
+    function class_one(){
+
+    };
+
+    class_one.prototype.var_one = "Hello";
+    class_one.prototype.fun_one = function(){
+        return "Hello_2";
+    };
+
+    let obj = new class_one();
+    console.log( obj.var_one, obj.fun_one() );    //Hello Hello_2
+</script>
+-->
+
+
+<!-- 
+    inheritance (prototype chaining)
+    --------------------------------
+-->
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.var_one = "Hello_1";
+
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create( class_one.prototype );
+    class_two.prototype.var_two = "Hello_2";
+
+    let obj = new class_two();
+    console.log( obj.var_one, obj.var_two );    //Hello_1 Hello_2
+
+</script>
+-->
+
+
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.fun_one = function(){
+        return "Hello_1";
+    };
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create( class_one.prototype );
+    class_two.prototype.fun_two = function(){
+        return "Hello_2";
+    };
+
+    function class_three(){
+
+    };
+    class_three.prototype = Object.create( class_two.prototype );
+    class_three.prototype.fun_three = function(){
+        return "Hello_3";
+    };
+
+    let obj1 = new class_one();
+    console.log( obj1.fun_one() );          //Hello_1
+
+    let obj2 = new class_two();
+    console.log( obj2.fun_one(), obj2.fun_two() );   //Hello_1 Hello_2
+
+
+    let obj3 = new class_three();
+    console.log( obj3.fun_one(), obj3.fun_two(), obj3.fun_three() );    //Hello_1 Hello_2 Hello_3
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
