@@ -545,6 +545,7 @@ Syntax
 -->
 
 
+<!--
 <script>
     function class_one(){
 
@@ -579,6 +580,252 @@ Syntax
     let obj3 = new class_three();
     console.log( obj3.fun_one(), obj3.fun_two(), obj3.fun_three() );    //Hello_1 Hello_2 Hello_3
 </script>
+-->
+
+
+<!--
+    function overriding
+    -------------------
+        - overriding the parent class functionality with child class functionality called as function overriding.
+
+        - Rule:
+          -----
+            both parent class and child class should have same function name
+-->
+
+<!--
+<script>
+    function Parent(){
+
+    };
+    Parent.prototype.dbFun = function(){
+        return "MySQL Data Soon....!";
+    };
+
+    function Child(){
+
+    };
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.dbFun = function(){
+        return "MongoDB Data Soon....!";  
+    };
+
+    let obj = new Child();
+    console.log( obj.dbFun() );    //MongoDB Data Soon....!
+</script>
+-->
+
+
+<!--
+<script>
+    function Parent(){
+
+    };
+    Parent.prototype.dbFun = function(){
+        return "Oracle Data Soon...!";
+    };
+
+    function Child(){
+
+    };
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.dbFun = function(){
+        return "MySQL Data Soon....!";
+    };
+
+
+    function Subchild(){
+
+    };
+    Subchild.prototype = Object.create(Child.prototype);
+    Subchild.prototype.dbFun = function(){
+        return "MongoDB Data Soon...!";
+    };
+    let obj = new Subchild();
+    console.log( obj.dbFun() );     //MongoDB Data Soon...!
+</script>
+-->
+
+<!--
+<script>
+    function my_class(arg1){
+
+    };
+    my_class.prototype.var_one = arg1;
+    let obj = new my_class("Hello");
+    console.log( obj.var_one );        //Uncaught ReferenceError: arg1 is not defined
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(arg1){
+        this.var_one = "arg1";
+    };
+    class_one.prototype.var_two = this.var_one;
+
+    let obj = new class_one("Hello");
+    console.log( obj.var_two );      //undefined
+</script>
+-->
+
+
+<!--
+    generator functions
+    -------------------
+        - generator functions are used to "control" the flow of execution of code.
+
+        - this concept also introduced in "ES6".
+
+        - generator functions prefix with "*".
+
+        - generator functions will return "cursor" mechanism.
+
+        - by using cursor mechanism, we can control the "flow" of execution.
+-->
+
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield "Hello_2";
+        yield "Hello_3";
+        yield "Hello_4";
+        yield "Hello_5";
+    };
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield *fun_two();
+        yield "Hello_3";
+    };
+    function *fun_two(){
+        yield "Hello_2";
+    };
+    let cusror = fun_one();
+    console.log( cusror.next() );
+    console.log( cusror.next() );
+    console.log( cusror.next() );
+    console.log( cusror.next() );
+</script>
+-->
+
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        return "Hello_2";
+        yield "Hello_3";
+    };
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
