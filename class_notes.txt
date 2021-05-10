@@ -179,6 +179,121 @@ functionname(param1,param2,param3,param4,.....paramn);
 
 
 
+											****** Optional Parameters in Functions *****
+
+	- while passing the parameters, we will make few parameters are optional.
+
+	- this concept also introduced in "ES6".
+
+	- optional parameters we will represent with "?"
+
+	- optional parameters concept will work only in "TypeScript" Environment.
+
+	- Superset of JavaScript called as TypeScript.
+
+	- TypeScript introduced by microsoft.
+
+	- TypeScript follows the OOPS.
+
+	- TypeScript files we will save with ".ts" extension.
+
+	- Browsers won't understand TypeScript.
+
+	- So, as a TypeScript Developer we must convert TypeScript to Equalent JavaScript.
+
+	- conversion from TypeScript to Equalent JavaScript called as "Transpilation".
+
+	- "tsc" is the tool, used to perform the Transpilation.
+
+	- "tsc" stands for TypeScript Compiler.
+
+Installation of Softwares
+-------------------------
+install TypeScript
+
+> npm install -g typescript
+
+	- "npm" stands for node packaging manager.
+
+	- "npm" present in "NodeJS".
+
+	- "-g" stands for global Installation.
+
+
+Transpilation
+-------------
+
+> tsc demo.ts  
+       o/p
+   demo.js
+
+> node demo.js
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
