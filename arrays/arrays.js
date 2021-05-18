@@ -39,8 +39,7 @@
     console.log( arr );                                 //[ <1 empty item>, 20, 30, 40, <1 empty item>, 60, 70, 80, 90, 100, 11 ]
 */
 
-
-
+/*
 //iterations
 //for()
 //forEach()
@@ -59,6 +58,237 @@ arr.forEach( (arg1,arg2)=>{
 for(let value of arr){
     console.log( value );
 };
+*/
+
+
+
+/*
+    //push()
+    //unshift()
+    //pop()
+    //shift()
+    let arr = [20,30,40];
+    console.log( arr );                     //[ 20, 30, 40 ]
+
+    arr.push(50);
+    console.log( arr );                     //[ 20, 30, 40, 50 ]
+
+    arr.unshift(10);
+    console.log( arr );                     //[ 10, 20, 30, 40, 50 ]
+
+
+    arr.pop();
+    console.log( arr );                     //[ 10, 20, 30, 40 ]
+
+
+    arr.shift();
+    console.log( arr );                     //[ 20, 30, 40 ]
+*/
+
+/*
+    //splice()
+    //splice() function used to add / remove any index from array
+    let arr = [10,20,30,40,50,60,70,80,90,100];
+    arr.splice( 4, 2 );
+    console.log( arr );                 //[10,20,30,40,70,80,90,100]
+
+
+    arr.splice(5,2);
+    console.log( arr );                 //[ 10, 20, 30, 40, 70, 100 ]
+
+
+    arr.splice(5,1);
+    console.log( arr );               //[ 10, 20, 30, 40, 70 ]
+
+
+    arr.splice(0,1);
+    console.log( arr );                 //[ 20, 30, 40, 70 ]
+
+
+    arr.splice(3,0,50,60);
+    console.log( arr );                 //[ 20, 30, 40, 50, 60, 70 ]
+
+
+    arr.splice(0,1,10,20);
+    console.log( arr );                 //[ 10, 20, 30, 40, 50, 60, 70 ]
+
+
+    arr.splice(7,0,80,90,100);
+    console.log( arr );                 //[10,20,30,40,50,60,70,80,90,100]
+*/
+
+
+
+
+
+
+/*
+    //map()
+    //it is used to manipulate the each and every array element
+    console.log(
+        [1,2,3,4,5].map( (element,index)=>{
+                return element * 100;
+        } )
+    );              //[ 100, 200, 300, 400, 500 ]
+
+
+    console.log(
+        [1,2,3,4,5].map((element,index)=>{
+            return "$" + element;
+        })
+    );          //[ '$1', '$2', '$3', '$4', '$5' ]
+*/
+
+
+/*
+    //filter()
+    //it is used to apply the conditions on array
+    console.log(
+        [100,200,300,400,500].filter((element,index)=>{
+            return element<=300;
+        })
+    );          //[ 100, 200, 300 ]
+
+
+    console.log(
+        [1,2,3,4,5].map((element,index)=>{
+            return element*100;
+        }).filter((element,index)=>{
+            return element<100;
+        })
+    );              //[]
+
+*/
+
+
+
+//reduce()
+//it is used to find the sum of array elements
+console.log(
+    [1,2,3,4,5].reduce((firstValue,nextValue)=>{
+        return firstValue + nextValue;
+    })
+);
+//15
+
+console.log(
+    [1,2,3,4,5].map((element,index)=>{
+        return element
+    }).filter((element,index)=>{
+        return element<=5;
+    }).reduce((firstValue,nextValue)=>{
+        return firstValue+nextValue;
+    })
+);              //15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
