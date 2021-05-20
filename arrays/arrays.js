@@ -245,6 +245,7 @@ for(let value of arr){
 */
 
 
+/*
 //indexOf()
 //it won't create indexes to duplicate elements
 let arr = [10,20,30,10,40,30,10];
@@ -271,108 +272,121 @@ console.log(
     })
 );      //[ 10, 20, 30 ]
 
+*/
+
+
+
+/*
+    //includes()
+    //used to search the particular element
+    //this function is boolean function
+    console.log(
+        [10,20,30,40,50].includes(30)
+    );          //true
 
+    console.log(
+        [10,20,30,40,50].includes(300)
+    );          //false 
+*/
 
 
 
+/*
+    //find()
+    //find() function, used to serach the element
+    //find() function is number function
+    console.log(
+        [10,20,30,40,50].find((element,index)=>{
+            return element == 30;
+        })
+    );  //30
 
+    console.log(
+        [10,20,30,40,50].find((element,index)=>{
+            return element == 300;
+        })
+    );      //undefined
+*/
 
 
+/*
+    //some()
+    //if atleast "one" element satisfies the condition, it will return true otherwise false
+    console.log(
+        [10,20,30,40,50].some((element,index)=>{
+            return element<=10;
+        })
+    );
+    //true
+    console.log(
+        [10,20,30,40,50].some((element,index)=>{
+            return element<10;
+        })
+    );
+    //false
+*/
 
 
+/*
+    //every()
+    //if all elements satisfies the condition then it will return true
+    console.log(
+        [10,20,30,40,50].every((element,index)=>{
+            return element<=100;
+        })
+    );
 
+    //true
+    console.log(
+        [10,20,30,40,50].every((element,index)=>{
+            return element<50;
+        })
+    );
+    //false
+*/
 
 
+//copyWithin()
+//used to shift the indexes
+let arr1 = [10,20,30,40,50,60,70,80,90,100];
+arr1.copyWithin(5);
+console.log( arr1 );        //[10,20,30,40,50,10,20,30,40,50]
 
 
+let arr2 = [10,20,30,40,50,60,70,80,90,100];
+arr2.copyWithin(2);
+console.log( arr2 );        //[10,20,10,20,30,40,50,60,70,80]
 
 
+let arr3 = [10,20,30,40,50,60,70,80,90,100];
+arr3.copyWithin(8);
+console.log( arr3 );        //[10,20,30,40,50,60,70,80,10,20]
 
 
+let arr4 = [10,20,30,40,50,60,70,80,90,100];
+arr4.copyWithin(-5);
+console.log( arr4 );        //[10,20,30,40,50,10,20,30,40,50]
 
 
+let arr5 = [10,20,30,40,50,60,70,80,90,100];
+arr5.copyWithin(-2);
+console.log(arr5);      //[10,20,30,40,50,60,70,80,10,20]
 
 
+let arr6 = [10,20,30,40,50,60,70,80,90,100];
+arr6.copyWithin(2,6);
+console.log( arr6 );        //[10,20,70,80,90,100,70,80,90,100]
 
 
+let arr7 = [10,20,30,40,50,60,70,80,90,100];
+arr7.copyWithin(-2,-6);
+console.log( arr7 );        //[10,20,30,40,50,60,70,80,50,60]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let arr8 = [10,20,30,40,50,60,70,80,90,100];
+arr8.copyWithin(-3,6);
+console.log(arr8);                  //
 
 
 
