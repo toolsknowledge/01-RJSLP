@@ -346,47 +346,191 @@ console.log(
 */
 
 
-//copyWithin()
-//used to shift the indexes
-let arr1 = [10,20,30,40,50,60,70,80,90,100];
-arr1.copyWithin(5);
-console.log( arr1 );        //[10,20,30,40,50,10,20,30,40,50]
+/*
+    //copyWithin()
+    //used to shift the indexes
+    let arr1 = [10,20,30,40,50,60,70,80,90,100];
+    arr1.copyWithin(5);
+    console.log( arr1 );        //[10,20,30,40,50,10,20,30,40,50]
 
 
-let arr2 = [10,20,30,40,50,60,70,80,90,100];
-arr2.copyWithin(2);
-console.log( arr2 );        //[10,20,10,20,30,40,50,60,70,80]
+    let arr2 = [10,20,30,40,50,60,70,80,90,100];
+    arr2.copyWithin(2);
+    console.log( arr2 );        //[10,20,10,20,30,40,50,60,70,80]
 
 
-let arr3 = [10,20,30,40,50,60,70,80,90,100];
-arr3.copyWithin(8);
-console.log( arr3 );        //[10,20,30,40,50,60,70,80,10,20]
+    let arr3 = [10,20,30,40,50,60,70,80,90,100];
+    arr3.copyWithin(8);
+    console.log( arr3 );        //[10,20,30,40,50,60,70,80,10,20]
 
 
-let arr4 = [10,20,30,40,50,60,70,80,90,100];
-arr4.copyWithin(-5);
-console.log( arr4 );        //[10,20,30,40,50,10,20,30,40,50]
+    let arr4 = [10,20,30,40,50,60,70,80,90,100];
+    arr4.copyWithin(-5);
+    console.log( arr4 );        //[10,20,30,40,50,10,20,30,40,50]
 
 
-let arr5 = [10,20,30,40,50,60,70,80,90,100];
-arr5.copyWithin(-2);
-console.log(arr5);      //[10,20,30,40,50,60,70,80,10,20]
+    let arr5 = [10,20,30,40,50,60,70,80,90,100];
+    arr5.copyWithin(-2);
+    console.log(arr5);      //[10,20,30,40,50,60,70,80,10,20]
 
 
-let arr6 = [10,20,30,40,50,60,70,80,90,100];
-arr6.copyWithin(2,6);
-console.log( arr6 );        //[10,20,70,80,90,100,70,80,90,100]
+    let arr6 = [10,20,30,40,50,60,70,80,90,100];
+    arr6.copyWithin(2,6);
+    console.log( arr6 );        //[10,20,70,80,90,100,70,80,90,100]
 
 
-let arr7 = [10,20,30,40,50,60,70,80,90,100];
-arr7.copyWithin(-2,-6);
-console.log( arr7 );        //[10,20,30,40,50,60,70,80,50,60]
+    let arr7 = [10,20,30,40,50,60,70,80,90,100];
+    arr7.copyWithin(-2,-6);
+    console.log( arr7 );        //[10,20,30,40,50,60,70,80,50,60]
 
 
 
-let arr8 = [10,20,30,40,50,60,70,80,90,100];
-arr8.copyWithin(-3,6);
-console.log(arr8);                  //
+    let arr8 = [10,20,30,40,50,60,70,80,90,100];
+    arr8.copyWithin(-3,6);
+    console.log(arr8);                  
+
+
+
+    let arr9 = [10,20,30,40,50,60,70,80,90,100];
+    arr9.copyWithin(2,4,7);
+    console.log( arr9 );        //[10, 20, 50, 60,  70, 60, 70, 80, 90, 100]
+
+
+
+    let arr10 = [10,20,30,40,50,60,70,80,90,100];
+    arr10.copyWithin(4,7,9);
+    console.log(arr10);          //[10,20,30,40,80,90,70,80,90,100]
+*/
+
+
+/*
+    //slice()
+    //choosing particular elements
+    let arr1 = [10,20,30,40,50,60,70,80,90,100];
+    console.log( arr1.slice(4,6) );                 //[ 50, 60 ]
+    console.log( arr1.slice(1,4) );                 //[ 20, 30, 40 ]
+    console.log( arr1.slice(9,10) );                //[ 100 ]
+    console.log( arr1.slice(0,1) );                 //[ 10 ]
+*/
+
+
+/*
+    //concat()
+    //used to concat the arrays
+    let arr1 = [10,20,30];
+    let arr2 = [40,50,60];
+    console.log( arr1.concat(arr2) );           //[ 10, 20, 30, 40, 50, 60 ]
+
+    //ES6
+    // "..."
+    // spread operator
+    console.log(
+        [...arr1,...arr2]
+    );      //[ 10, 20, 30, 40, 50, 60 ]
+*/
+
+
+/*
+    let arr = [10,20,30,40,50,60,70,80,90,100];
+    // [60,70,80,90,100,10,20,30,40,50]
+    console.log(
+        [...arr.slice(5,10),...arr.slice(0,5)]
+    );
+
+    //[400,150]
+    //[550]
+*/
+
+
+/*
+    //fill()
+    let arr = [10,20,30,40,50];
+    console.log( arr.fill(100) );               //[ 100, 100, 100, 100, 100 ]
+    console.log( arr.fill(200,1) );             //[ 100, 200, 200, 200, 200 ]
+    console.log( arr.fill(300,2,3) );           //[ 100, 200, 300, 200, 200 ]
+    console.log( arr.fill(400,3,4) );           //[ 100, 200, 300, 400, 200 ]
+    console.log( arr.fill(500,4,5) );           //[ 100, 200, 300, 400, 500 ]
+*/
+
+
+
+//sort()
+//ascending order / decending order
+let arr1 = [10,50,20,40,30];
+
+console.log(
+    arr1.sort((num1,num2)=>{
+        return num1-num2;
+    })
+);      //[ 10, 20, 30, 40, 50 ]
+
+
+console.log(
+    arr1.sort((num1,num2)=>{
+        return num2-num1;
+    })
+);      //[ 50, 40, 30, 20, 10 ]
+
+
+//2nd max element
+console.log(
+   arr1.sort((num1,num2)=>{
+       return num2-num1;
+   })[1]
+);
+//40
+
+//2nd min element
+console.log(
+    arr1.sort((num1,num2)=>{
+        return num1-num2
+    })[1]
+);   //20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
