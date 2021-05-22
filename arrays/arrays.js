@@ -453,39 +453,146 @@ console.log(
 */
 
 
+/*
+    //sort()
+    //ascending order / decending order
+    let arr1 = [10,50,20,40,30];
 
-//sort()
-//ascending order / decending order
-let arr1 = [10,50,20,40,30];
-
-console.log(
-    arr1.sort((num1,num2)=>{
-        return num1-num2;
-    })
-);      //[ 10, 20, 30, 40, 50 ]
+    console.log(
+        arr1.sort((num1,num2)=>{
+            return num1-num2;
+        })
+    );      //[ 10, 20, 30, 40, 50 ]
 
 
-console.log(
+    console.log(
+        arr1.sort((num1,num2)=>{
+            return num2-num1;
+        })
+    );      //[ 50, 40, 30, 20, 10 ]
+
+
+    //2nd max element
+    console.log(
     arr1.sort((num1,num2)=>{
         return num2-num1;
-    })
-);      //[ 50, 40, 30, 20, 10 ]
-
-
-//2nd max element
-console.log(
-   arr1.sort((num1,num2)=>{
-       return num2-num1;
-   })[1]
-);
-//40
-
-//2nd min element
-console.log(
-    arr1.sort((num1,num2)=>{
-        return num1-num2
     })[1]
-);   //20
+    );
+    //40
+
+    //2nd min element
+    console.log(
+        arr1.sort((num1,num2)=>{
+            return num1-num2
+        })[1]
+    );   //20
+*/
+
+
+/*
+    //flat()
+    //used to convert the multi dimensional array to single dimensional array
+    let arr = [1,[2],[3],4,[5]];
+    console.log( arr.flat(1) );
+    //[ 1, 2, 3, 4, 5 ]
+
+    let arr1 = [[[[[[[1]]]]]],[[[[[[[2]]]]]]],[[[[[[[3,4,5]]]]]]]]
+    console.log( arr1.flat(Infinity) );
+    //[ 1, 2, 3, 4, 5 ]
+*/
+
+
+
+/*
+    //flatMap()
+    let arr1 = [1,2,3,4,5];
+    let arr2 = ["one","two","three","four","five"];
+
+    // [[1,"one"],[2,"two"],[3,"three"],[4,"four"],[5,"five"]] 
+    // [1,"one",2,"two",3,"three",4,"four",5,"five"]
+    console.log(
+        arr2.map((element,index)=>{
+            return [element,arr1[index]]
+        }).flat(1)
+    );
+
+
+    console.log(
+        arr2.flatMap((element,index)=>{
+            return [element,arr1[index]]
+        })
+    );
+*/
+
+
+/*
+    //reverse()
+    //used to reverse the "array" elements
+    let arr1 = [10,50,20,40,30];
+    console.log( arr1.reverse() );          //[ 30, 40, 20, 50, 10 ]
+    console.log( Array.from("Hello").reverse().join("") );       //olleH
+
+
+    let arr2 = ["Hello_1","Hello_2"];
+    // O/P : ["Hello_2","Hello_1"]
+    // O/P : ["1_olleH","2_olleH"]
+    // O/P : ["2_olleH","1_olleH"]
+*/
+
+
+/*
+    //repeat
+    console.log( "hello".repeat(5) );               //hellohellohellohellohello
+    console.log( [10].repeat(2) );                  //Error
+*/
+
+console.log( [10,20] + [30,40] );                   //10,2030,40
+console.log( [10,20] - [30,40] );                   //NaN
+console.log( [10,20] * [30,40] );                   //NaN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
