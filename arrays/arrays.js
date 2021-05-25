@@ -546,9 +546,228 @@ console.log(
     console.log( [10].repeat(2) );                  //Error
 */
 
-console.log( [10,20] + [30,40] );                   //10,2030,40
-console.log( [10,20] - [30,40] );                   //NaN
-console.log( [10,20] * [30,40] );                   //NaN
+
+
+/*
+    console.log( [10,20] + [30,40] );                   //10,2030,40
+    console.log( [10,20] - [30,40] );                   //NaN
+    console.log( [10,20] * [30,40] );                   //NaN
+*/
+
+
+/*
+    console.log(
+        ["H","E","L","L","O"].toString()
+    );    //H,E,L,L,O
+    console.log(
+        ["H","E","L","L","O"].join("")
+    );  //HELLO
+*/
+
+
+/*
+    console.log(
+        ["W","E","L","C","O","M","E"].toString().replace(/,/g,"")
+    );
+
+    //W,E,L,C,O,M,E
+    //WE,L,C,O,M,E
+    //WELCOME
+*/
+
+/*
+    let str = " Hello ";
+    console.log( str.length );              //7
+    console.log( str.trim().length );       //5
+    console.log( str.trimStart().length );  //6
+    console.log( str.trimEnd().length );    //6
+*/
+
+/*
+    console.log("Hello".padStart(20,"*"));                  //***************Hello
+    console.log("Hello".padEnd(20,"#"));                    //Hello###############
+    console.log("Hello".padStart(10,"*").padEnd(15,"*"));   //*****Hello*****
+*/
+
+
+/*
+    let arr = [10,20,10,20,10];
+    console.log( arr.lastIndexOf(10) );                 //4
+    console.log( arr.lastIndexOf(20) );                 //3
+
+
+    let arr1 = [10,20,30,10,40,20,10,20,30,40,50,10];
+    console.log( arr1.lastIndexOf( 10, 5 ) );               //3
+    console.log( arr1.lastIndexOf( 10, 4 ) );               //3
+    console.log( arr1.lastIndexOf( 10, 3 ) );               //3
+    console.log( arr1.lastIndexOf( 10, 2 ) );               //0
+    console.log( arr1.lastIndexOf( 20, 7 ) );               //7
+    console.log( arr1.lastIndexOf( 100, 7 ) );              //-1
+    console.log( arr1.lastIndexOf( 50, 9 ) );               //-1
+*/
+
+
+
+
+
+/*
+    console.log(
+        "Welcome to AshokIT".substr(6,3)
+    );
+    //e t
+
+    console.log(
+        "React JS".substr(4,3)
+    );
+    //t J
+*/
+
+
+/*
+    console.log(
+        "Welcome to AshokIT".substring(0,7)
+    );      //Welcome
+
+
+    console.log(
+        "Welcome to AshokIT".substring(9,12)
+    );  //o A
+*/
+
+
+
+
+console.log( "welcome to ashokit".split(" ") );     //[ 'welcome', 'to', 'ashokit' ]
+
+
+let s = "welcome to * ashokit";
+console.log(s.replace("*","").split(" "));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
