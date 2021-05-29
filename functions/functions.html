@@ -1,0 +1,100 @@
+<!--
+    Function
+    --------
+        - particular business logic called as function.
+
+        - functions are used to reuse the business logic.
+
+        - we have following types of functions.
+
+                1) Named Functions
+
+                2) Anonymous Functions / Arrow Functions / NameLess Functions / CallBack Functions / Lamda Functions
+
+                3) Rest Parameters in Functions
+
+                4) Optional Parameters in Functions
+
+                5) Default Parameters in Functions
+
+                6) IIFE (Immidiate Invokable Functional Expression)
+
+                7) Generators
+
+                8) Constructor Functions
+
+-->
+
+<!--
+    Named Functions
+    ---------------
+        - The function with the particular name called as Named Function.
+        
+        Syntax
+        ------
+        //function definition
+        function func_one(param1,param2,param3,....param n){
+                
+                //business logic
+        
+        };
+
+
+        //call the function
+        func_one( arg1, arg2, arg3,......arg n);
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return "welcome to named functions";
+    };
+
+    console.log( fun_one );                 //def
+
+    console.log( fun_one() );               //welcome to named functions
+
+</script>
+-->
+
+
+<script>
+    function fun_one(){
+        return fun_two;
+    };
+
+    function fun_two(){
+        return "welcome to named functions";
+    };
+
+    console.log( fun_one()() );                             //welcome to named functions
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
