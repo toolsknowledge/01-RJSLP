@@ -59,6 +59,7 @@
 -->
 
 
+<!--
 <script>
     function fun_one(){
         return fun_two;
@@ -70,10 +71,113 @@
 
     console.log( fun_one()() );                             //welcome to named functions
 </script>
+-->
 
 
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log( arg1, arg2, arg3 );
+    }
+    fun_one("Angular12","NodeJS","MongoDB");                //Angular12 NodeJS MongoDB
+    fun_one();                                              //undefined undefined undefined
+    fun_one(undefined,"Go");                                //undefined Go undefined
+    fun_one(null,null,null);                                //null null null
+    fun_one( undefined,null,undefined );                    //undefined null undefined
+</script>
+-->
 
 
+<!--
+<script>
+    let arr = [];
+
+    function fun_one(){
+        return "Hello";
+    };
+
+    for(let i=0;i<5;i++){
+        arr.push( fun_one );
+    }
+
+    // console.log( arr[0]() );
+    // console.log( arr[1]() );
+    // console.log( arr[2]() );
+    // console.log( arr[3]() );
+    // console.log( arr[4]() );
+
+    arr.forEach((element,index)=>{
+        console.log( element() );
+    });
+
+</script>
+-->
+
+
+<!--
+    Anonymous Functions
+    -------------------
+        - The function without name called as anonymous function.
+
+        - anounymous functions also called as arrow functions.
+
+        - arrow functions introduced in ES6
+
+        - we will represent arrow functions by using "=>"
+
+    Syntax
+    ------
+    var/let/const variable_name = (arg1,arg2,arg3,.....argn)=>{
+        //business logic
+    }
+
+    variable_name(param1,param2,param3,......paramn);
+-->
+
+
+<!--
+<script>
+    let func_one = ()=>{
+        return "welcome to ES6 arrow functions";
+    };
+    console.log( func_one );
+    console.log( func_one() );                          //welcome to ES6 arrow functions
+</script>
+-->
+
+
+<!--
+<script>
+    let func_one = (arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    };
+    func_one();                                     //undefined undefined undefined
+    func_one("Hello_1","Hello_2","Hello_3");        //Hello_1 Hello_2 Hello_3
+    func_one(undefined,"Welcome");                  //undefined Welcome undefined
+    func_one(null,null,null);                       //null null null
+</script>
+-->
+
+
+<!--
+<script>
+    let func_one = ()=>{
+        return ()=>{
+            return "Hello";
+        };
+    };
+    console.log( func_one()() );                    //Hello
+</script>
+-->
+
+<script>
+    let func_one = (arg1,arg2,arg3)=>{
+        console.log( arg1(), arg2(), arg3() );
+    };
+    func_one( ()=>{ return "Hello_1" }, 
+              ()=>{ return "Hello_2" }, 
+              ()=>{ return "Hello_3" } );               //Hello_1 Hello_2 Hello_3
+</script>
 
 
 
