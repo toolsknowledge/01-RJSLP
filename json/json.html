@@ -295,6 +295,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     let arr = [];
 
@@ -302,9 +304,10 @@
 
     console.log( arr.length );
 </script>
+-->
 
 
-
+<!--
 <script>
     //we have array of json objects
     //each json object containes following keys     @name   @capital    @region @population     @nativeName     @flag,...........
@@ -342,6 +345,136 @@
     document.write(`</tbody></table>`);
 
 </script>
+-->
+
+
+
+
+<!--
+    variables are used to "store" the data.
+        Ex.
+            string
+            number
+            boolean
+            array
+            ---
+            ---
+            ---
+    variables should contain a-z , A-Z, 0-9 , $ and _
+
+    variables should not start with "numbers"
+-->
+
+
+<!--
+<script>
+    let obj = {
+       123 : "Hello_1",
+    };
+    //console.log( obj.123 );     //Uncaught SyntaxError: missing ) after argument list
+    console.log( obj[123] );      //Hello_1
+</script>
+-->
+
+
+<!--
+<script>
+    let obj = {
+        "123" : 123,
+        "$123" : "$123",
+        "123abc" : "123abc",
+        "abc-123" : "abc-123",
+        "NAME" : "NAME",
+        "name" : "name"
+    };
+
+    //console.log( obj.123 );               //Error
+    console.log( obj["123"] );                //123
+    console.log( obj.$123, obj["$123"] );
+    //console.log( obj.123abc );              //Error
+    console.log( obj["123abc"] );              //
+    console.log( obj["abc-123"] );
+    console.log( obj.NAME );            
+    console.log( obj.name )
+
+</script>
+-->
+
+
+<!--
+<script>
+   let variable = "value";
+   
+   let obj = {
+       value : "Hello_1"
+   }
+
+   console.log( variable );             //value
+   console.log( obj );                  //{value:"Hello_!"}         
+   console.log( obj.value );            //Hello_1
+
+   console.log( obj.variable );         //undefined
+   console.log( obj[variable] );        //Hello_1
+</script>
+-->
+
+<script>
+    const variable = "name";
+
+    const obj = {
+        name : "Hello_2",
+        variable : "Hello_1"
+    };
+
+    console.log( obj.variable );            //Hello_1
+    console.log( obj["variable"] );           //Hello_1
+    console.log( obj[variable] );           //Hello_2
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
