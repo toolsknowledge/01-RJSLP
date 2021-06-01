@@ -1,0 +1,38 @@
+<!--
+    ajax calls
+    ----------
+        - executing the network calls independently/concurantly called as ajax calls.
+
+        - jQuery is the javascript library, used to make the asynhcronous calls.
+
+        - we will include "jQuery" by using following "CDN".
+
+        https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+
+        - in jQuery library we have ajax() function, used to make asynchronous calls.
+
+        - "$" symbol, used to refer the jQuery library.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method : "GET",
+                url : "https://restcountries.eu/rest/v2/all",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>
+    </body>
+</html>
+
+
+
