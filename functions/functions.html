@@ -170,6 +170,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     let func_one = (arg1,arg2,arg3)=>{
         console.log( arg1(), arg2(), arg3() );
@@ -178,6 +180,129 @@
               ()=>{ return "Hello_2" }, 
               ()=>{ return "Hello_3" } );               //Hello_1 Hello_2 Hello_3
 </script>
+-->
+
+
+<!--
+    Rest Parameters in functions
+    ----------------------------
+        - Rest parameters, used to store the more than "one argument".
+        
+        - we will represent Rest Parameter by using "..." symbol.
+
+        - "..." symbol called as "Rest Parameter" / "Spread Operator".
+
+        - Spread Operator introduced in ES6.
+
+    Rules
+    -----
+        1) Spread Operator always should be "last".
+
+        2) we can't take more than "one spread" operator.
+-->
+<!--
+<script>
+    function fun_one(...arg1){
+        console.log( arg1 );
+    };
+    fun_one("Hello_1","Hello_2","Hello_3");                     //["Hello_1", "Hello_2", "Hello_3"]
+    fun_one();                                                  //[]
+    fun_one(undefined,"Hello_2");                               //[undefined, "Hello_2"]
+    fun_one(undefined,null,undefined);                          //[undefined, null, undefined]
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,...arg2){
+
+    };
+    fun_one("Hello_1","Hello_2");               //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,arg2){
+
+    };                                          //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1,...arg2){
+        console.log( arg1, arg2 );
+    }
+    fun_one();                              //undefined []
+    fun_one("Hello_1","Hello_2");           //Hello_1 ["Hello_2"]
+    fun_one("Hello_1","Hello_2","Hello_3"); //Hello_1  ["Hello_2", "Hello_3"]
+    fun_one(undefined,undefined);           //undefined [undefined]
+    fun_one(undefined,undefined,undefined); //undefined  [undefined, undefined]
+    fun_one(null,null,null);                //null [null, null]
+</script>
+-->
+
+
+<!--
+    Default Parameters
+    ------------------
+        while defining the functions, we will initilize the arguments with default values.
+
+        this concept also introduced in ES6
+-->
+
+
+<!--
+    javascript   (20 days)   (2 months)
+
+    css3                    2 to 3 months    (25days)
+
+    reactjs 
+    
+    
+    
+-->
+
+
+
+<script>
+    function fun_one(arg1="Hello_1",arg2="Hello_2",arg3="Hello_3"){
+        console.log( arg1, arg2, arg3 );
+    };
+    fun_one();                                      //Hello_1 Hello_2 Hello_3
+    fun_one("ReactJS","NodeJS","MongoDB");          //ReactJS NodeJS MongoDB
+    fun_one(undefined,undefined,undefined);         //Hello_1 Hello_2 Hello_3
+    fun_one(undefined,"Welcome_2");                 //Hello_1 Welcome_2 Hello_3
+    fun_one(null,null,null);                        //null null null
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
