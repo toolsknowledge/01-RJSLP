@@ -254,19 +254,8 @@
 -->
 
 
+
 <!--
-    javascript   (20 days)   (2 months)
-
-    css3                    2 to 3 months    (25days)
-
-    reactjs 
-    
-    
-    
--->
-
-
-
 <script>
     function fun_one(arg1="Hello_1",arg2="Hello_2",arg3="Hello_3"){
         console.log( arg1, arg2, arg3 );
@@ -277,6 +266,160 @@
     fun_one(undefined,"Welcome_2");                 //Hello_1 Welcome_2 Hello_3
     fun_one(null,null,null);                        //null null null
 </script>
+-->
+
+<!--
+<script>
+    function fun_one(arg1,arg2="Hello_2"){
+        console.log(arg1, arg2);
+    }
+    fun_one();                                  //undefined "Hello_2"
+    fun_one("Hello_1");                         //Hello_1 Hello_2
+    fun_one(undefined,undefined);               //undefined "Hello_2" 
+    fun_one(null,null);                         //null null              
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1,arg2="Hello_2",...arg3){
+        console.log( arg1, arg2, arg3 );
+    };
+
+    fun_one();                                              //undefined "Hello_2" []
+    fun_one("Hello_1");                                     //Hello_1 Hello_2 []
+    fun_one("Hello_1",undefined,"Hello_3");                 //Hello_1 Hello_2 ["Hello_3"]
+    fun_one("Hello_1",undefined,"Hello_3","Hello_4");       //Hello_1 Hello_2  ["Hello_3", "Hello_4"]
+    fun_one(undefined,undefined,undefined);                 //undefined "Hello_2" [undefined]
+    fun_one(null,null,null,null);                           //null null [null, null]
+</script>
+-->
+
+
+<!--
+    IIFE
+    ----
+        - Immidiate Invokable Functional Expression
+
+        - ES9
+
+        - self invokable functions
+
+    Syntax
+    ------
+       (function(arg1,arg2,arg3,.....argn){
+            //business logic
+       })(param1,param2,param3,.....paramn);
+
+
+       ((arg1,arg2,arg3,.....argn)=>{
+            //business logic
+       })(param1,param2,param3,.....paramn);
+-->
+
+<!--
+<script>
+    (()=>{
+        console.log("IIFE");
+    })();       //IIFE
+</script>
+-->
+
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    })("ReactJS","NodeJS","MongoDB");               //ReactJS NodeJS MongoDB
+</script>
+-->
+
+<!--
+<script>
+    let res = (()=>{
+        return "Hello";
+    })();
+    console.log( res );             //Hello
+</script>
+-->
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    })( (()=>{ return "ReactJS" })(), 
+        (()=>{ return "Deno" })(), 
+        (()=>{ return "MongoDB"})() );
+    //ReactJS Deno MongoDB
+</script>   
+-->
+
+
+<!--
+<script>
+    for(var i=0;i<5;i++){
+        ((i)=>{    
+            setTimeout(()=>{
+                console.log(i);
+            },5000)
+        })(i);
+    };
+
+    //0  1   2   3   4  (5sec)
+
+    //5  5   5   5   5  (5sec)   (wrong)  (bug)   (var)   (global polluting issue)
+
+    //ES6    let
+
+    //ES9   IIFE
+</script>
+-->
+
+
+
+<!--
+    Generators
+    ----------
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
