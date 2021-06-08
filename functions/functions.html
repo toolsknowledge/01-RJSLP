@@ -381,7 +381,138 @@
 <!--
     Generators
     ----------
+        - it is used to get the control on flow of execution, then we will choose "Genarators".
+
+        - Genarator Functions will prefix with "*".
+
+        - Generator Functions will return "cursor" mechanism.
+
+        - with cursor mechanism, we can control the flow of execution.
 -->
+
+
+<!-- <script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield "Hello_2";
+        yield "Hello_3";
+        yield "Hello_4";
+        yield "Hello_5";
+    }
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script> -->
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield *fun_two();
+        yield "Hello_3";
+    };
+    function *fun_two(){
+        yield "Hello_2";
+    };
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield "Hello_2";
+        yield "Hello_3";
+        yield "Hello_4";
+        return "Hello_5";
+        yield "Hello_6";
+    };
+
+    let cursor = fun_one();
+    for(let i=0;i<6;i++){
+        console.log( cursor.next() );
+    }
+</script>
+-->
+
+
+
+
+<!--
+    constructor functions
+    ---------------------
+        - collection of variables and functions called as class.
+
+        - before ES6 version, we will create classes by using "constructor" function.
+
+        - in constructor functions all the members will prefix with "this" keyword.
+
+        - we will create object to the constructor functions by using "new" keyword.
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
