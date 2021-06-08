@@ -49,42 +49,113 @@
 */
 
 
+/*
+    function add(num1,callback){
+        return callback(false, num1+5);
+    };
 
-function add(num1,callback){
-    return callback(false, num1+5);
+    function sub(num1,callback){
+        return callback(false,num1-3);
+    }
+
+    function mul(num1,callback){
+        return callback(false,num1*2);
+    }
+
+    function div(num1,callback){
+        return callback(false, (num1 / 2)-2 );
+    }
+
+
+    add(5, (error,addRes)=>{
+        if(!error){
+            sub(addRes, (error,subRes)=>{
+                if(!error){
+                    mul(subRes,(error,mulRes)=>{
+                        if(!error){
+                            div(mulRes,(error,divRes)=>{
+                                if(!error){
+                                    console.log(divRes);
+                                }
+                            })
+                        }
+                    })
+                }
+            } );
+        }
+    } );    //callback hell
+            //promises
+*/
+
+
+
+function add(num1){
+    return new Promise((resolve,reject)=>{
+        resolve(num1+5);
+    });
 };
 
-function sub(num1,callback){
-    return callback(false,num1-3);
-}
+function sub(num1){
+    return new Promise((resolve,reject)=>{
+        resolve(num1-3);
+    });
+};
 
-function mul(num1,callback){
-    return callback(false,num1*2);
-}
+function mul(num1){
+    return new Promise((resolve,reject)=>{
+        resolve(num1*2);
+    });
+};
 
-function div(num1,callback){
-    return callback(false, (num1 / 2)-2 );
-}
+function div(num1){
+    return new Promise((resolve,reject)=>{
+        resolve( (num1/2)-2 );
+    });
+};
 
 
-add(5, (error,addRes)=>{
-    if(!error){
-        sub(addRes, (error,subRes)=>{
-            if(!error){
-                mul(subRes,(error,mulRes)=>{
-                    if(!error){
-                        div(mulRes,(error,divRes)=>{
-                            if(!error){
-                                console.log(divRes);
-                            }
-                        })
-                    }
-                })
-            }
-        } );
-    }
-} );    //callback hell
-        //promises
+// async function myFun(){
+//     let res1 = await add(5);
+//     let res2 = await sub(res1);
+//     let res3 = await mul(res2);
+//     const res4 = await div(res3);
+//     console.log( res1, res2, res3, res4 );
+// };
+
+// myFun();
+
+
+// (async ()=>{
+//     let res1 = await add(5);
+//     let res2 = await sub(res1);
+//     let res3 = await mul(res2);
+//     const res4 = await div(res3);
+//     console.log( res1, res2, res3, res4 );
+// })()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
