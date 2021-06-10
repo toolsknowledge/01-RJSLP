@@ -558,7 +558,7 @@
 
 
 
-<script>
+<!--
     function class_one(){
 
     };
@@ -576,8 +576,165 @@
 
     let obj1 = new class_one();
     console.log( obj1.var_one );
+</script>
+-->
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.fun_one = function(){
+        return "Hello_1";
+    };
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create( class_one.prototype );
+    class_two.prototype.fun_two = function(){
+        return "Hello_2";
+    };
+
+    function class_three(){
+
+    };
+    class_three.prototype = Object.create( class_two.prototype );
+    class_three.prototype.fun_three = function(){
+        return "Hello_3";
+    }; 
+    
+    let obj1 = new class_one();
+    console.log( obj1.fun_one() );
+
+
+    let obj2 = new class_two();
+    console.log( obj2.fun_one(), obj2.fun_two() );
+
+
+    let obj3 = new class_three();
+    console.log( obj3.fun_one(), obj3.fun_two(), obj3.fun_three() );
 
 </script>
+-->
+
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.dbFun = function(){
+        return "data from oracle database soon....!";
+    };
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create( class_one.prototype );
+    class_two.prototype.dbFun = function(){
+        return "data from mongodb database soon....!";
+    };
+
+    let obj = new class_two();
+    console.log( obj.dbFun() );         //data from mongodb database soon....!
+</script>
+-->
+
+
+<!--
+    "optional parameters" in functions
+    --------------------------------
+        while calling the functions,we will make few parameters are "optional".
+
+        this concept also introduced in "ES6".
+
+        we will represent optional parameter by using "?"
+
+        optional parameters will work in "TypeScript".
+
+        TypeScript is the "programming" language.
+
+        TypeScript given by "Microsoft".
+
+        superset of javascript also called as TypeScript.
+
+        we will save TypeScript files with ".ts" extension.
+
+        we will install TypeScript by using following command.
+
+                > npm install -g typescript
+
+                npm stands for node packaging manager
+
+                -g stands for global installation
+
+        in general, browsers can't understand typescript.
+
+        so, we need to convert typescript to equalent javascript.
+
+        conversion from typescript to equalent javascript called as Transpilation.
+
+        "tsc" is the tool, used to perform transpilation.
+
+        "tsc" stands for typescript compiler.
+
+
+            > tsc demo.ts
+
+                 o/p
+
+            demo.js
+
+
+            > node demo.js
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
