@@ -119,6 +119,222 @@
 -->
 
 
+<!--
+<script>
+    let weakMap = new WeakMap();
+    weakMap.set("key1","Hello_1")
+           .set("key2","Hello_2");
+    console.log(weakMap);               //error
+</script>
+-->
+
+
+<!--
+<script>
+    let weakMap = new WeakMap();
+    let key1 = {};
+    let key2 = {};
+
+    let value1 = "Hello_1";
+    let value2 = "Hello_2";
+
+    weakMap.set(key1,value1)
+           .set(key2,value2);
+
+    console.log( weakMap );                 //{{…} => "Hello_1", {…} => "Hello_2"}
+
+    console.log( weakMap.has(key1) );
+
+    weakMap.delete(key1);
+    console.log( weakMap ); 
+</script>
+-->
+
+<!--
+    Set
+    ----
+-->
+
+
+<!--
+<script>
+    let set = new Set();
+    console.dir( set );
+
+    //add()
+    //clear()
+    //Set()
+    //delete()
+    //entries() ,  forEach() and for...of()
+    //has()
+    //values()
+    //size
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add(10).add(20).add(30).add(10).add(20).add(30).add(40);
+    console.log( set );             //{10, 20, 30, 40}
+</script>
+-->
+
+
+<!--
+<script>
+    console.log(
+        [...new Set([10,20,30,10,20,30])]
+    );
+
+    //[10, 20, 30]
+</script>
+-->
+
+
+
+<!--
+<script>
+    let set = new Set();
+
+    set.add(10)
+       .add(20)
+       .add(30)
+       .add(40)
+       .add(50);
+
+    console.log( set );
+
+    console.log( set.size );
+
+    for(let v of set){
+        console.log(v);
+    };
+</script>
+-->
+
+
+<!--
+    duplicate values
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
+
+<script>
+    let arr = [10,20,30,10,20,30];
+
+    console.log(
+        arr.filter((element,index)=>{
+            return arr.indexOf(element) === index;
+        })
+    );          //[10, 20, 30]
+
+
+    console.log(
+        [...new Set(arr)]
+    );
+
+    console.log( _.uniq(arr) );         //[10, 20, 30]
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
