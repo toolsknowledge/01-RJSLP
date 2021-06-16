@@ -691,8 +691,38 @@
 
             > node demo.js
 
-
 -->
+
+
+<!--
+<script>
+    function fun_one(str1="",str2=str1.length){
+        console.log( str2 );
+    };
+    fun_one();
+    fun_one("javascript");          //10
+</script>
+-->
+
+<script>
+    let arr = [10,20,30,40,50];
+    delete arr[0];
+    console.log(arr);                   //[empty, 20, 30, 40, 50]
+    console.log(arr.length);            //5
+
+
+    arr.forEach((arg1,arg2)=>{
+        console.log( arg2 );
+    });
+</script>
+
+
+
+
+
+
+
+
 
 
 

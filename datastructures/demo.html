@@ -216,7 +216,7 @@
 
 <!--
     duplicate values
--->
+
 
 <script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
 
@@ -237,6 +237,51 @@
     console.log( _.uniq(arr) );         //[10, 20, 30]
 
 </script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add("Hello")
+       .add(100)
+       .add(true)
+       .add([100])
+       .add({"key1":"Hello_1"})
+       .add(undefined)
+       .add(null)
+       .add(100n)
+       .add(Symbol("Hello"));
+    console.log( set );
+</script>
+-->
+
+
+<!--
+<script>
+    let weakSet = new WeakSet();
+
+    let obj1 = {"num1":100};
+    let obj2 = {"num1":200};
+    let obj3 = {"num1":300};
+    let obj4 = {"num1":400};
+    let obj5 = {"num1":500};
+
+    weakSet.add(obj1)
+           .add(obj2)
+           .add(obj3)
+           .add(obj4)
+           .add(obj5)
+           .add("Hello");
+
+    console.log( weakSet );
+
+
+
+
+</script>
+-->
+
+
 
 
 
